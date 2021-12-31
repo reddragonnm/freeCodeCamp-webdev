@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Survey</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Programming Survey Form</h1>
+    <p id="description">Help us improve our platform</p>
+  </header>
+
+  <form method="post" id="survey-form">
+    <div>
+      <label id="name-label" for="name" class="heading">Name:</label>
+      <input placeholder="Enter name" type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+      <label id="email-label" for="email" class="heading">Email: </label>
+      <input placeholder="Enter email" type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+      <label id="number-label" for="number" class="heading">Age:</label>
+      <input placeholder="Enter age" type="number" name="number" id="number" min="5" max="100">
+    </div>
+
+    <fieldset>
+      <legend class="heading">Choose programming languages</legend>
+
+      <label><input type="checkbox" value="python">Python</label><br>
+      <label><input type="checkbox" value="javascript">Javascript</label><br>
+      <label><input type="checkbox" value="java">Java</label><br>
+      <label><input type="checkbox" value="csharp">C#</label><br>
+      <label><input type="checkbox" value="c/cpp">C/C++</label><br>
+      <label><input type="checkbox" value="go">Go</label><br>
+      <label><input type="checkbox" value="ruby">Ruby</label><br>
+      <label><input type="checkbox" value="rust">Rust</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend class="heading">Choose main Operating System</legend>
+
+      <label><input name="os" type="radio" value="windows">Windows</label><br>
+      <label><input name="os" type="radio" value="mac">Mac</label><br>
+      <label><input name="os" type="radio" value="linux">Linux</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend class="heading">Tools used</legend>
+
+      <label><input type="checkbox" value="git">Git</label><br>
+      <label><input type="checkbox" value="docker">Docker</label><br>
+      <label><input type="checkbox" value="yarn">Yarn</label><br>
+      <label><input type="checkbox" value="kubernetes">Kubernetes</label><br>
+      <label><input type="checkbox" value="deno">Deno</label><br>
+      <label><input type="checkbox" value="postman">Postman</label><br>
+      <label><input type="checkbox" value="figma">Figma</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend class="heading">Code editor</legend>
+
+      <label><input type="radio" name="editor" value="vscode">VS Code</label><br>
+      <label><input type="radio" name="editor" value="vim">Vim</label><br>
+      <label><input type="radio" name="editor" value="notepad++">Notepad ++</label><br>
+      <label><input type="radio" name="editor" value="sublimetext">Sublime Text</label><br>
+      <label><input type="radio" name="editor" value="atom">Atom</label><br>
+      <label><input type="radio" name="editor" value="jetbrainside">Jetbrains IDEs</label><br>
+    </fieldset>
+
+    <label class="heading">Years coding</label>
+    <select id="dropdown">
+      <option>Less than 1</option>
+      <option>1 - 5</option>
+      <option>5 - 10</option>
+      <option>10 - 15</option>
+      <option>15 - 20</option>
+      <option>More than 20</option>
+    </select>
+
+    <div>
+      <label id="comments-label" for="comments" class="heading">Comments:</label>
+      <textarea name="comments" id="comments" cols="70" rows="15"></textarea>
+    </div>
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
