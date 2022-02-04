@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 5em;
+  background-color: black;
+}
+#header a > #header-img {
+  height: 2em;
+  display: block;
+}
+#header #nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+#header #nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  color: white;
+}
+#header #nav-bar a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: greenyellow;
+          text-decoration-color: greenyellow;
+  text-decoration-thickness: 0.3em;
+}/*# sourceMappingURL=styles.css.map */
