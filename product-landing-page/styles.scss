@@ -1,4 +1,6 @@
-$accent-color: greenyellow;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+$accent-color: #fe67c4;
 
 * {
   box-sizing: border-box;
@@ -25,7 +27,7 @@ body {
   padding: 1.5em 5em;
 
   #header-img {
-    height: 2em;
+    height: 2.5em;
     display: block;
   }
 
@@ -33,11 +35,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 50px;
+    gap: 2em;
 
     a {
       text-decoration: none;
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: black;
 
       &:hover {
@@ -49,8 +51,45 @@ body {
   }
 }
 
+.button {
+  text-decoration: none;
+  padding: .5em 2em;
+  border: 3px solid $accent-color;
+  font-family: monospace;
+  color: black;
+  font-size: 1.5em;
+
+  &:hover {
+    background-color: $accent-color;
+    color: white;
+  }
+}
+
 #home {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+    gap: 3em;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    em {
+      font-style: normal;
+      color: $accent-color;
+    }
+  }
 }
 
 .container {
