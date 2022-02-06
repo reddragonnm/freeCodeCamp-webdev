@@ -66,6 +66,60 @@ body {
   }
 }
 
+.button-new {
+  text-decoration: none;
+  padding: 0.5em 2em;
+  border: 3px solid $accent-color;
+  font-family: monospace;
+  color: white;
+  font-size: 1em;
+  background-color: $accent-color;
+  width: 10em;
+}
+
+// tablet
+@media (max-width: 961px) {
+  #home {
+    position: relative;
+
+    #content {
+      text-align: justify;
+    }
+
+    .button {
+      margin: auto;
+    }
+
+    img {
+      position: absolute;
+      display: block;
+      margin: auto;
+
+      z-index: -1;
+      filter: blur(60px);
+    }
+
+    h1 {
+      color: black;
+    }
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+}
+
+// mobile
+@media (max-width: 641px) {
+  #header {
+    #nav-bar {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.01em;
+    }
+  }
+}
+
 #home {
   display: flex;
   justify-content: space-around;
@@ -121,5 +175,86 @@ body {
     display: block;
     width: 60%;
     margin: auto;
+  }
+}
+
+#pricing {
+  padding: 2em;
+
+  h1 {
+    font-size: 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+    padding-top: 0.5em;
+    text-align: center;
+  }
+
+  .plans {
+    margin: 3em auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .plan-container {
+      padding: 3em;
+      border: 1px solid black;
+
+      width: 25em;
+
+      text-align: center;
+
+      h2 {
+        font-size: 2em;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1em;
+        font-family: monospace;
+        font-weight: 400;
+      }
+
+      ul {
+        margin-top: 2.5em;
+        list-style-type: none;
+        font-family: sans-serif;
+
+        li {
+          margin: 1em auto;
+        }
+      }
+
+      .button-new {
+        margin: auto;
+        margin-top: 2em;
+        display: block;
+      }
+    }
+  }
+}
+
+#subscribe {
+  background-color: #fe67c4;
+
+  h1 {
+    font-size: 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: white;
+
+    padding-top: 0.5em;
+    text-align: center;
+  }
+
+  form {
+    margin: 2em auto;
+
+    input[type="email"] {
+      height: 3em;
+      width: 25em;
+    }
   }
 }

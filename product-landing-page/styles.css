@@ -74,6 +74,58 @@ body {
   color: white;
 }
 
+.button-new {
+  text-decoration: none;
+  padding: 0.5em 2em;
+  border: 3px solid #fe67c4;
+  font-family: monospace;
+  color: white;
+  font-size: 1em;
+  background-color: #fe67c4;
+  width: 10em;
+}
+
+@media (max-width: 961px) {
+  #home {
+    position: relative;
+  }
+  #home #content {
+    text-align: justify;
+  }
+  #home .button {
+    margin: auto;
+  }
+  #home img {
+    position: absolute;
+    display: block;
+    margin: auto;
+    z-index: -1;
+    -webkit-filter: blur(60px);
+            filter: blur(60px);
+  }
+  #home h1 {
+    color: black;
+  }
+  .plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 641px) {
+  #header #nav-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0.01em;
+  }
+}
+
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,5 +202,87 @@ body {
   display: block;
   width: 60%;
   margin: auto;
+}
+
+#pricing {
+  padding: 2em;
+}
+
+#pricing h1 {
+  font-size: 3em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#pricing .plans {
+  margin: 3em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pricing .plans .plan-container {
+  padding: 3em;
+  border: 1px solid black;
+  width: 25em;
+  text-align: center;
+}
+
+#pricing .plans .plan-container h2 {
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+#pricing .plans .plan-container h3 {
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: 400;
+}
+
+#pricing .plans .plan-container ul {
+  margin-top: 2.5em;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+#pricing .plans .plan-container ul li {
+  margin: 1em auto;
+}
+
+#pricing .plans .plan-container .button-new {
+  margin: auto;
+  margin-top: 2em;
+  display: block;
+}
+
+#subscribe {
+  background-color: #fe67c4;
+}
+
+#subscribe h1 {
+  font-size: 3em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#subscribe form {
+  margin: 2em auto;
+}
+
+#subscribe form input[type="email"] {
+  height: 3em;
+  width: 25em;
 }
 /*# sourceMappingURL=styles.css.map */
