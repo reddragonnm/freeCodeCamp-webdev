@@ -68,13 +68,16 @@ body {
 
 .button-new {
   text-decoration: none;
-  padding: 0.5em 2em;
-  border: 3px solid $accent-color;
+  padding: 1em 2em;
   font-family: monospace;
   color: white;
   font-size: 1em;
   background-color: $accent-color;
   width: 10em;
+
+  &:hover {
+    background-color: lighten($color: $accent-color, $amount: 5);
+  }
 }
 
 // tablet
@@ -236,6 +239,11 @@ body {
   }
 }
 
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
 #subscribe {
   background-color: #fe67c4;
 
@@ -250,11 +258,40 @@ body {
   }
 
   form {
-    margin: 2em auto;
+    width: 70%;
+    display: block;
+    margin: auto;
 
-    input[type="email"] {
-      height: 3em;
-      width: 25em;
+    padding: 5em 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #email {
+      width: 50%;
+      border: none;
+      border-bottom: 3px solid white;
+      background-color: transparent;
+
+      padding: 0.3em 0em;
+      outline: none;
+      font-size: 2em;
+      color: white;
+    }
+
+    #submit {
+      text-decoration: none;
+      padding: 0.5em 2em;
+      border: 3px solid white;
+      font-family: monospace;
+      color: white;
+      font-size: 1.5em;
+      background-color: $accent-color;
+
+      &:hover {
+        background-color: lighten($color: $accent-color, $amount: 5);
+      }
     }
   }
 }
