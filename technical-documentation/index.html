@@ -65,38 +65,193 @@ print(return_some_number()) # OUTPUT: 5</code></pre>
 
     <section class="main-section" id="Data_Types">
       <header>Data Types</header>
+
+      <!-- ! -->
       <p>
-        Python has 7 primitive data types:
+        Variables can be thought of boxes where different values can be stored while intialising
+        the box is given a name and a value. But this value can be changed later by reassigning the value.
+      </p> <br>
+
+      <p>
+        Python has 8 primitive data types:
       <ul class="dashed">
         <li>Numbers</li>
         <li>Strings</li>
         <li>Booleans</li>
         <li>Tuples</li>
-        <li>None</li>
         <li>Lists</li>
+        <li>Sets</li>
         <li>Dictionaries</li>
+        <li>None</li>
       </ul>
       </p>
+
+      <pre><code class="language-python"># variables ->
+a = 10 # assigning number value to a variable
+a = "hello" # variables can be reassigned and there types can be changed
+
+# data types ->
+b = 7 # numbers
+c = "Python is cool" # string
+d = True # boolean
+e = (5, 6) # tuple (explained later)
+f = [7, 8] # list (explained later)
+g = {5, 6, 7, 8} # (explained later)
+h = None # none
+
+# dictionaries ->
+# dictionaries are used to map keys to values
+days = {"Sun": 0, "Mon": 1, "Tue": 2, "Wed": 3, "Thurs": 4, "Fri": 5, "Sat": 6}
+# we can access a value by providing certain key to a dictionary
+print(days["Wed"]) # OUTPUTS: 3
+print(days["Tue"]) # OUTPUTS: 2
+print(days["Fri"]) # OUTPUTS: 5</code></pre>
     </section>
 
     <section class="main-section" id="Lists">
       <header>Lists</header>
+      <p>
+        Lists are used to store multiple values in a single variable. Values can
+        be added and removed from the list. Whereas a tuple is type of list that
+        cannot be changed. A set is a list that has no duplicate values but can
+        be changed.
+      </p>
+
+      <pre><code class="language-python"># lists ->
+a = [1, 2, 3] # intialising a list
+print(a[0]) # access value from list (index starts from 0)
+a.append(4) # add value 4 to end of the list
+print(a[-1]) # access last variable. OUTPUTS: 4
+a.remove(1) # remove given element from the list
+print(a[0]) # OUTPUTS: 2
+
+# tuples ->
+b = (2, 3, 4)
+print(b[0]) # same as list
+print(b[-1]) # same as list
+b.append(5) # ERROR
+
+# sets ->
+c = {1, 2, 3, 3, 4, 4, 4, 5, 5} # intialising with duplicate values
+print(c) # OUTPUTS: {1, 2, 3, 4, 5}
+c.add(6) # add value 6 to set
+c.remove(6) # remove value 6 from set</code></pre>
     </section>
 
     <section class="main-section" id="If_Else">
       <header>If Else</header>
+      <p>
+        If statements are used to check if a certain condition is true or false.
+        If the condition is true then the code inside the "if" statement will be
+        executed. If the condition is false then the code inside the "elif"
+        (Else if) statement will be executed and so on for all "elif"s. If
+        neither of the conditions are true then the code inside the "else" will
+        be executed.
+      </p>
+
+      <pre><code class="language-python"># NEW: Take input from user with given question and convert it to Number type
+grades = int(input("Enter grades from 100:"))
+
+if grades >= 75: # 75 - 100
+    print("You pass with honours!")
+elif grades >= 50: # 50 - 74
+    print("You pass with good marks :)")
+elif grades >= 25: # 25 - 49
+    print("You need to improve your marks :(")
+elif grades >= 0: # 0 - 24
+    print("You fail the semester!")
+else: # invalid input
+    print("Grades entered need to be positive!")</code></pre>
     </section>
 
     <section class="main-section" id="Loops">
       <header>Loops</header>
+
+      <p>
+        Loops are used to execute certain code multiple times. There are two types of loops:
+      <ul class="dashed">
+        <li>For Loops</li>
+        <li>While Loops</li>
+      </ul>
+      </p>
+
+      <pre><code class="language-python"># for loop ->
+# print 1 to 10
+for i in range(1, 10):
+    print(i)
+  
+# print elements of list/array/set
+l = [1, 2, 3, 4]
+for i in l:
+    print(i)
+
+# while loop ->
+# print 1 to 10
+j = 1
+while j <= 10:
+    print(j)
+    j += 1
+  
+# print elements of list/array/set
+l = [1, 2, 3, 4]
+j = 0
+while j < len(l):
+    print(l[j]) 
+    j += 1       
+</code></pre>
     </section>
 
     <section class="main-section" id="Classes">
       <header>Classes</header>
+
+      <p>
+        Classes are used to group code together. They are used to make code more
+        readable and easier to understand. Classes are also used to make code
+        more reusable.
+      </p>
+
+      <pre><code class="language-python"># create Animal class
+class Animal:
+    # get name of animal while initialising
+    def __init__(self, name):
+        # set class variable
+        self.name = name
+      
+    # add method to class
+    def walk(self):
+        print(self.name + " is walking!")
+      
+# Giraffe is child of Animal class and contains name variable and walk method
+class Giraffe(Animal):
+    def __init__(self, name):
+        super().__init__(name) # initialise parent class
+        
+    def eat(self):
+        print(self.name + "is eating leaves!")
+
+# initalise Giraffe object
+speedy = new Giraffe("Speedy")
+print(speedy.name) # OUTPUTS: Speedy
+speedy.walk() # OUTPUTS: Speedy is walking!
+speedy.eat() # OUTPUTS: Speedy is eating leaves!</code></pre>
     </section>
 
     <section class="main-section" id="Error_Handling">
       <header>Error Handling</header>
+
+      <p>
+        Error handling is used to handle errors that may occur in your code during runtime.
+        Examples are division by zero, invalid input, etc.
+      </p>
+
+      <pre><code class="language-python"># division by zero error
+num1 = int(input("Enter a number:")) # get integer as input
+num2 = int(input("Enter second number: ")) # get second integer
+
+try:
+    print(num1 + " / " + num2  + " is " + num1/num2)
+except ZeroDivisionError:
+    print("Second number cannot be 0")</code></pre>
     </section>
 
   </main>
