@@ -7,10 +7,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Technical Documentation</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <script src="./lib/prism.js"></script>
+  <link rel="stylesheet" href="./lib/prism.css">
+
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+  <nav id="navbar">
+    <header>
+      <span style="color:rgba(53,107,150,255);">Learn</span> <span style="color: rgba(246,208,73,255);">Python</span>
+    </header>
+
+    <ul id="nav-links">
+      <li><a class="nav-link" href="#Hello_World!">Hello World!</a></li>
+      <li><a class="nav-link" href="#Functions">Functions</a></li>
+      <li><a class="nav-link" href="#Data_Types">Data types</a></li>
+      <li><a class="nav-link" href="#Lists">Lists</a></li>
+      <li><a class="nav-link" href="#If_Else">If Else</a></li>
+      <li><a class="nav-link" href="#Loops">Loops</a></li>
+      <li><a class="nav-link" href="#Classes">Classes</a></li>
+      <li><a class="nav-link" href="#Error_Handling">Error Handling</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Hello_World!">
+      <header>Hello World!</header>
+      <p>Hello World in Python is a really easy one liner. In this example print is a function (which is taught later)
+      </p>
+
+      <pre><code class="language-python">print("Hello World!")</code></pre>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions are a way to group code together. They are used to make code more readable and easier to understand.
+        Functions are also used to make code more reusable.</p>
+
+      <pre><code class="language-python">def call_print():
+    print("Hello World!")
+
+call_print() # OUTPUT: Hello World!
+
+# function with parameters
+def add_numbers(num1, num2):
+    print(num1 + num2)
+
+add_numbers(1, 2) # OUTPUT: 3
+
+# return value from function
+def return_some_number():
+    return 5
+
+print(return_some_number()) # OUTPUT: 5</code></pre>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+      <header>Data Types</header>
+      <p>
+        Python has 7 primitive data types:
+      <ul class="dashed">
+        <li>Numbers</li>
+        <li>Strings</li>
+        <li>Booleans</li>
+        <li>Tuples</li>
+        <li>None</li>
+        <li>Lists</li>
+        <li>Dictionaries</li>
+      </ul>
+      </p>
+    </section>
+
+    <section class="main-section" id="Lists">
+      <header>Lists</header>
+    </section>
+
+    <section class="main-section" id="If_Else">
+      <header>If Else</header>
+    </section>
+
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+    </section>
+
+    <section class="main-section" id="Classes">
+      <header>Classes</header>
+    </section>
+
+    <section class="main-section" id="Error_Handling">
+      <header>Error Handling</header>
+    </section>
+
+  </main>
+
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
